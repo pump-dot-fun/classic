@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>hodlers manifesto - believe in something</title>
+  <style>
+    body {
+      background-color: #0d0d0d;
+      color: #e0e0e0;
+      font-family: Consolas, Menlo, Monaco, "Courier New", monospace;
+      font-size: 15px;
+      padding: 5vw;
+      line-height: 1.6;
+      word-wrap: break-word;
+    }
+    pre {
+      overflow-x: auto;
+      white-space: pre-wrap;
+    }
+    .comment {
+      color: #6a9955;
+    }
+    .string {
+      color: #ce9178;
+    }
+    .keyword {
+      color: #569cd6;
+    }
+    .function {
+      color: #dcdcaa;
+    }
+    .emphasis {
+      color: #c586c0;
+    }
+    .constant {
+      color: #4ec9b0;
+    }
+  </style>
+</head>
+<body>
+
+<pre>
+<span class="comment">// a hodlers manifesto</span>
+<span class="comment">// written by <span style="filter: blur(4px); user-select: none;">anon</span>
+
+<span class="comment">/**Crypto is broken.
+Not because of pump.fun and solana jeets, but because of what it revealed about ALL of us.
+
+Greed.
+Impatience.
+Illusion.
+
+The people who once built together now dump on each other.
+The ones who used to shill their bags because they believed, now shill because they bought early.
+There’s no community. Just exit liquidity.
+No conviction. Just fear of being dumped on.
+No innovation. Just trending bots, volume scripts, and hype campaigns faking life into hollow tokens.
+
+Devs bundle-buy at launch, spike the chart, and full stack before anyone else even knows what the fuck is going on.
+No real projects. No plans. No purpose.
+Just pump and dump. Over and over. Again and again.
+
+But I remember something different.
+
+I remember when we held for each other.
+When we worked for our bags.
+When being early meant building — not extracting.
+When a token wasn't just a chart. 
+When we weren't just a community of bag holders, but a community driven with purpose.
+
+And so we return.
+
+$pump is not just a coin.
+It is a social experiment.
+It is a call to action.
+
+No socials.
+No team.
+No fake narrative.
+Nobody.
+Not even me.
+
+
+Only this.
+
+A repo. A file. A spark.
+
+If you’re reading this, it means you chose to be here.
+You downloaded a file. You opened it. You read these words.
+You care.
+Maybe.
+
+This is not for the lazy.
+This is not for the greedy.
+This is for the ones who still believe.
+
+We will not beg for attention.
+We will not farm engagement.
+We will not fake momentum.
+
+You will not be told what to do.
+
+If this succeeds, it was because of YOU.
+
+Because the market is about to change.
+
+Bitcoin is knocking on all-time highs.
+Nations are aligning.
+The world is waking up to crypto, once and for all.
+
+But if we don’t fix what’s broken inside…
+We’ll be right back here — only worse.
+
+So ask yourself:
+
+Are you here for exit liquidity?
+Or are you here to build something real?
+
+Because this time, there’s no one to follow.
+
+There’s only you. And the others like you.
+You have been rugged time and time again.
+All you need is one coin.
+All that coin needs is a movement.
+You can make it all back in one trade.
+This is that trade.
+If you want it to be.
+**/</span>
+
+</pre>
+<div style="margin-top: 40px;">
+  <button id="executeBtn" style="
+    background-color: #1e1e1e;
+    color: #00ff99;
+    border: 1px solid #00ff99;
+    padding: 8px 20px;
+    font-family: Consolas, monospace;
+    font-size: 16px;
+    cursor: pointer;
+  ">
+    execute
+  </button>
+
+  <div id="output" style="
+    margin-top: 20px;
+    color: #00ff99;
+    font-family: Consolas, monospace;
+    font-size: 16px;
+    white-space: pre-line;
+    display: none;
+  ">
+  </div>
+</div>
+
+<script>
+  const btn = document.getElementById("executeBtn");
+  const output = document.getElementById("output");
+
+  const steps = [
+    "Creating a movement...",
+    "Crafting an unstoppable narrative...",
+    "Uniting degens...",
+    "Cleansing...",
+    "Welcome back."
+  ];
+
+  const delay = ms => new Promise(res => setTimeout(res, ms));
+
+  async function simulateLoading() {
+    output.style.display = "block";
+    btn.disabled = true;
+    output.innerHTML = "";
+
+    for (let i = 0; i < steps.length; i++) {
+      const line = document.createElement("div");
+      const status = document.createElement("span");
+      line.appendChild(status);
+      output.appendChild(line);
+
+      let percent = 0;
+      while (percent <= 100) {
+        status.innerText = `${steps[i]} ${percent}%`;
+        await delay(20 + Math.random() * 30);
+        percent += 5;
+      }
+
+      status.innerText = `${steps[i]} ✅`;
+      await delay(300);
+    }
+
+    btn.disabled = false;
+  }
+
+  btn.addEventListener("click", simulateLoading);
+</script>
+
+
+
+
+</body>
+</html>
